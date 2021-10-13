@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css'
 import { SearchBar } from './Searchbar';
 import { useQuery, gql } from '@apollo/client'
+
 import { IonApp, IonCard, IonInput, Ionloading, IonPage, IonSpinner } from '@ionic/react';
 
 const ROCKETS = gql`
@@ -20,6 +21,7 @@ const ROCKETS = gql`
 `
 
 function App() {
+const [inputText, setInputText] = useState();
 
   const { loading, error, data } = useQuery(ROCKETS)
   if(loading) return <p className="loading"> <IonSpinner name="crescent" /></p>
@@ -29,7 +31,10 @@ function App() {
     <IonPage> 
       <div className="App">
         <h2>SPACE STUFF</h2>
-        <SearchBar/>
+        <SearchBar
+        inputText={inputText}
+        setInputText={setInputText}
+        />
         {data.launchesPast.map((launchesPast, id) => (
           <p key={id}>{launchesPast.mission_name}</p>
         ))}
