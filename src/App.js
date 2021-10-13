@@ -29,16 +29,23 @@ const [inputText, setInputText] = useState();
   return (
     <>
     <IonPage> 
-      <div className="App">
-        <h2>SPACE STUFF</h2>
-        <SearchBar
-        inputText={inputText}
-        setInputText={setInputText}
-        />
-        {data.launchesPast.map((launchesPast, id) => (
-          <p key={id}>{launchesPast.mission_name}</p>
-        ))}
-      </div>
+    <section class="container">
+        <div className='left'>
+          <div className='insideLeft'>
+            <SearchBar
+            inputText={inputText}
+            setInputText={setInputText}
+            />
+          </div>
+        </div>
+        <div className='right'>
+          <div className='insideRight'>
+            {data.launchesPast.map((launchesPast, id) => (
+              <p key={id}>{launchesPast.mission_name}</p>
+            ))}
+          </div>
+        </div>
+    </section>
     </IonPage>
     </>
   );

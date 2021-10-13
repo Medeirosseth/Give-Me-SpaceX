@@ -1,10 +1,33 @@
-.App {
-  text-align: center;
-}
 
 p {
   display: flex;
   justify-content: center;
   align-items: center;
   
+}
+
+body{
+  display: flex;
+  background-image: url('https://wallpapercave.com/wp/wp2284535.jpg');
+  color: white;
+}
+
+/* .container{
+  display: flex;
+} */
+
+.left{
+  flex: 1;
+  margin-top: 30%;
+  margin-left: 5%;
+}
+
+/* .insideLeft{
+  justify-content: center;
+  align-items: center;
+} */
+
+.right{
+  flex: 1;
+  margin-left: 100%;
 }

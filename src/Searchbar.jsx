@@ -9,11 +9,13 @@ export const SearchBar = ({inputText, setInputText}) => {
   }
 
   return (
-    <form>
-      <IonCard>  
-        <IonInput onIonChange={inputTextHandler} placeholder="Enter Input"></IonInput>
-      </IonCard>
-        <IonButton>Search</IonButton>
-    </form>
+    <IonPage> 
+      <form>
+        <IonCard>  
+          <IonInput onIonChange={inputTextHandler} placeholder="Enter Input"></IonInput>
+        </IonCard>
+          <IonButton>Search</IonButton>
+      </form>
+    </IonPage>
   );
 };
