@@ -1,30 +1,20 @@
 import React, { useState } from 'react';
 import './App.css'
 import { SearchBar } from './Searchbar';
-import { useQuery, gql } from '@apollo/client'
-
-import { IonCard, IonContent, IonPage, IonSpinner } from '@ionic/react';
-import SpaceData from './SpaceData';
-
+import {IonFooter} from '@ionic/react'
 
 function App() {
 const [inputText, setInputText] = useState();
+const [hideShow, setHideShow ] = useState(true);
 
   return (
     <>
-    <div className="container">
-        <div className='left'>
-            <SearchBar
-            inputText={inputText}
-            setInputText={setInputText}
-            />
-          </div>
-          <div className="right">
-            <div className="wrapper"> 
-              <SpaceData/>
-          </div>
-        </div>
-    </div>
+      <SearchBar
+        inputText={inputText}
+        setInputText={setInputText}
+        hideShow={hideShow}
+        setHideShow={setHideShow} />
+        <IonFooter/>
     </>
   );
 
