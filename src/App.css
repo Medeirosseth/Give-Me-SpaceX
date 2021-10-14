@@ -7,18 +7,25 @@ p {
 }
 
 body{
-  display: flex;
   background-image: url('https://wallpapercave.com/wp/wp2284535.jpg');
   color: white;
 }
 
-/* .container{
+.content{
+  margin-top: 50%;
+}
+
+img{
+  width: 70%;
+}
+
+.container{
   display: flex;
-} */
+}
 
 .left{
-  flex: 1;
-  margin-top: 30%;
+  flex: .5;
+  margin-top: 20%;
   margin-left: 5%;
 }
 
@@ -28,6 +35,8 @@ body{
 } */
 
 .right{
-  flex: 1;
-  margin-left: 100%;
+  flex: .5;
+  margin-left: 10%;
+  
 }
+

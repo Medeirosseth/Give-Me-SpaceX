@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel, IonCard, IonItemDivider, IonButton } from '@ionic/react';
+import {  IonPage, IonSearchbar, IonCard,  IonButton, IonInput } from '@ionic/react';
 
 export const SearchBar = ({inputText, setInputText}) => {
-
-  const inputTextHandler = (event) => {
-    event.preventDefault();
-      console.log(event.target.value)
+  
+  const inputTextHandler = (e) => {
+    
+    setInputText(e.target.value)
+      console.log(e.target.value)
   }
 
+  const inputSubmitHandler = (e) => {
+    e.preventDefault()
+    console.log(inputText, 'It was clicked')
+  }
   return (
     <IonPage> 
       <form>
         <IonCard>  
-          <IonInput onIonChange={inputTextHandler} placeholder="Enter Input"></IonInput>
+          <IonInput value={inputText} onIonChange={inputTextHandler} placeholder="Enter Input"></IonInput>
         </IonCard>
-          <IonButton>Search</IonButton>
+          <IonButton onIonSubmit={inputSubmitHandler} >Search</IonButton>
       </form>
     </IonPage>
   );
