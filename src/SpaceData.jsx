@@ -33,8 +33,8 @@ const SpaceData = ({inputText}) => {
         <div className='wrapper'>
           <ul> 
             <li> 
-              <p key={id}>{launchesPast.mission_name}</p>
-              <img src={launchesPast.links.flickr_images} alt='rocket' />  
+            <img src={launchesPast.links.flickr_images} alt='rocket' />  
+            <p key={id}>{launchesPast.mission_name}</p>
             </li>
           </ul>
         </div>
