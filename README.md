@@ -15,11 +15,11 @@
 ## Description:memo:
 
 _A web application that utilizes SpaceX GraphQL, Apollo, and Ionic-Framework_
-——————————————————————————————————————————————————————————————————————————————————
 
-![Rocket]('./public/assets/GMS.png)
 
-——————————————————————————————————————————————————————————————————————————————————
+![Rocket]('./GMS.png)
+
+
 <details>
   <summary>Setup/installation Requirements:open_file_folder:</summary>
   
