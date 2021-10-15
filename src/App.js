@@ -17,7 +17,6 @@ const [hideShow, setHideShow ] = useState(true);
         <IonFooter/>
     </>
   );
-
 }
 
 export default App;
