@@ -25,6 +25,7 @@ li {
 }
 
 img {
+  border-radius: 7%;
   max-height: 80%;
   min-width: 100%;
   object-fit: cover;
@@ -48,7 +49,7 @@ img {
 .right{
   flex: .5;
   margin-left: 10%;
-  
+  margin-top: 8%
 }
 
 .active{
