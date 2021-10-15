@@ -17,7 +17,7 @@
 _A web application that utilizes SpaceX GraphQL, Apollo, and Ionic-Framework_
 
 
-![Rocket]('./GMS.png)
+![Rocket](/GMS.png)
 
 
 <details>
