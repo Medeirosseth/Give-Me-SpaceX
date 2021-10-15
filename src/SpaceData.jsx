@@ -13,7 +13,7 @@ export const ROCKETS = gql`
   }
 }
 `
-const SpaceData = ({inputText, showHide, setHideShow}) => {
+const SpaceData = ({inputText}) => {
 
   const { loading, error, data } = useQuery(ROCKETS)
   if(loading) return <p className="loading"> <IonSpinner className="loading" name="crescent"  /></p>
@@ -22,26 +22,26 @@ const SpaceData = ({inputText, showHide, setHideShow}) => {
   const launches = data.launchesPast.filter(
     launchesPast => launchesPast.links.flickr_images.length > 0 
     && 
-    launchesPast.mission_name.includes(inputText)
+    launchesPast.mission_name.toLowerCase().startsWith(inputText.toLowerCase())
   )
 
   return( 
     <>
-      <div className={'imgContainer ' + (showHide && "active"  )}> 
-        {data ? 
-          launches.map((launchesPast, id) => (
-          <>
-            <ul> 
-              <li> 
-                <p key={id}>{launchesPast.mission_name}</p>
-                <img key={id} src={launchesPast.links.flickr_images} alt='rocket' />  
-              </li>
-            </ul>
-          </>
-          ))
-          : <h1>nuthin'</h1>
+    {inputText.length >= 1 ? 
+      launches.map((launchesPast, id) => (
+        <>
+        <div className='wrapper'>
+          <ul> 
+            <li> 
+              <p key={id}>{launchesPast.mission_name}</p>
+              <img src={launchesPast.links.flickr_images} alt='rocket' />  
+            </li>
+          </ul>
+        </div>
+        </>
+        ))
+        : ""
         }
-      </div>
     </>
   )
 };

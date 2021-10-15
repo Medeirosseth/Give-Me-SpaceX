@@ -19,8 +19,8 @@ export const SearchBar = () => {
           </IonCard> 
         </div>
         <div className="right"> 
-          <SpaceData 
-          inputText={inputText} />
+        <SpaceData 
+        inputText={inputText} />
         </div>
       </div>
     </>
